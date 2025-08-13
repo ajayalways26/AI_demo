@@ -16,6 +16,6 @@ CREATE OR REPLACE TABLE adam_data_engg_fsi_demo.adam_data_engg_fsi_demo_customer
     updated_at TIMESTAMP_NTZ DEFAULT CURRENT_TIMESTAMP COMMENT 'UTC timestamp when the record was last updated',
     created_by VARCHAR(128) COMMENT 'User or system that created this record',
     updated_by VARCHAR(128) COMMENT 'User or system that last updated this record',
-
-    CONSTRAINT PK_CUSTOMER PRIMARY KEY (customer_id)
-) COMMENT = 'Stores master customer data including demographic, segmentation, and audit attributes';
+    CONSTRAINT PK_customer PRIMARY KEY (customer_id)
+)
+COMMENT = 'Stores master customer data including demographic, segmentation, and audit attributes';
