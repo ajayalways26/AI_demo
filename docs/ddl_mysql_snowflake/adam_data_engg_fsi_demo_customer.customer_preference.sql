@@ -11,7 +11,7 @@ CREATE OR REPLACE TABLE adam_data_engg_fsi_demo.adam_data_engg_fsi_demo_customer
     updated_at TIMESTAMP_NTZ DEFAULT CURRENT_TIMESTAMP COMMENT 'Last updated timestamp (UTC)',
     updated_by VARCHAR(64) COMMENT 'User or system who last updated the record',
 
-    CONSTRAINT PK_customer_preference PRIMARY KEY (preference_id),
-    CONSTRAINT FK_customer_pref_customer FOREIGN KEY (customer_id) REFERENCES adam_data_engg_fsi_demo.adam_data_engg_fsi_demo_customer.customer(customer_id)
+    CONSTRAINT PK_CUSTOMER_PREFERENCE PRIMARY KEY (preference_id),
+    CONSTRAINT FK_CUSTOMER_PREF_CUSTOMER FOREIGN KEY (customer_id) REFERENCES adam_data_engg_fsi_demo.adam_data_engg_fsi_demo_customer.customer(customer_id)
 )
 COMMENT = 'Stores customer preferences such as communication channel and language.';
