@@ -10,8 +10,7 @@ CREATE OR REPLACE TABLE adam_data_engg_fsi_demo.adam_data_engg_fsi_demo_customer
     updated_at TIMESTAMP_NTZ DEFAULT CURRENT_TIMESTAMP COMMENT 'Last updated timestamp (UTC)',
     updated_by VARCHAR(64) COMMENT 'User or system who last updated the record',
 
-    CONSTRAINT PK_CUSTOMER_KYC_STATUS PRIMARY KEY (kyc_status_id),
-    CONSTRAINT FK_KYC_CUSTOMER FOREIGN KEY (customer_id)
-        REFERENCES adam_data_engg_fsi_demo.adam_data_engg_fsi_demo_customer.customer(customer_id)
+    CONSTRAINT PK_customer_kyc_status PRIMARY KEY (kyc_status_id),
+    CONSTRAINT FK_customer_kyc_status_customer_id FOREIGN KEY (customer_id) REFERENCES adam_data_engg_fsi_demo.adam_data_engg_fsi_demo_customer.customer(customer_id)
 )
-COMMENT = 'Tracks the Know Your Customer (KYC) status lifecycle for a customer';
+COMMENT = 'Tracks the Know Your Customer (KYC) status lifecycle for a customer.'
