@@ -1,0 +1,28 @@
+CREATE OR REPLACE TABLE adam_data_engg_fsi_demo.EDW_MART.FACT_TRANSACTION (
+    BUSINESS_COLUMN                      STRING                           COMMENT 'Business column description',
+    CREATED_BY                           STRING                           COMMENT 'Created by user',
+    CREATE_BATCH_ID                      STRING                           COMMENT 'ID for the create batch',
+    CREATE_DATE_TIME                     TIMESTAMP_NTZ                    COMMENT 'Timestamp for creation',
+    DATA_SOURCE                          STRING                           COMMENT 'Data source description',
+    IS_REVERSAL                          CHAR(1)                          COMMENT 'Is transaction a reversal (Y/N)',
+    ORIGINAL_TRANSACTION_LINE_ID         NUMBER(38,0)                     COMMENT 'Original transaction line ID',
+    SK_ACCOUNT_KEY                       NUMBER(38,0)                     NOT NULL COMMENT 'Surrogate key for account',
+    SK_CUSTOMER_KEY                      NUMBER(38,0)                     NOT NULL COMMENT 'Surrogate key for customer',
+    SK_TRANSACTION_CHANNEL_KEY           NUMBER(38,0)                     NOT NULL COMMENT 'Surrogate key for transaction channel',
+    SK_TRANSACTION_DATE_KEY              NUMBER(38,0)                     NOT NULL COMMENT 'Surrogate key for transaction date',
+    SK_TRANSACTION_KEY                   NUMBER(38,0)                     NOT NULL COMMENT 'Surrogate key for transaction',
+    SK_TRANSACTION_STATUS_KEY            NUMBER(38,0)                     NOT NULL COMMENT 'Surrogate key for transaction status',
+    SK_TRANSACTION_TYPE_KEY              NUMBER(38,0)                     NOT NULL COMMENT 'Surrogate key for transaction type',
+    SK_VALUE_DATE_KEY                    NUMBER(38,0)                     NOT NULL COMMENT 'Surrogate key for value date',
+    TRANSACTION_AMOUNT                   NUMBER(18,4)                     NOT NULL COMMENT 'Amount of the transaction',
+    TRANSACTION_DATE                     DATE                             NOT NULL COMMENT 'Date of the transaction',
+    TRANSACTION_ID                       NUMBER(38,0)                     NOT NULL COMMENT 'ID of the transaction',
+    TRANSACTION_REFERENCE                STRING                           NOT NULL COMMENT 'Reference for the transaction',
+    TRANSACTION_REMARKS                  STRING                           COMMENT 'Remarks for the transaction',
+    UPDATED_BY                           STRING                           COMMENT 'Updated by user',
+    UPDATE_BATCH_ID                      STRING                           COMMENT 'ID for the update batch',
+    UPDATE_DATE_TIME                     TIMESTAMP_NTZ                    COMMENT 'Timestamp for update',
+    VALUE_DATE                           DATE                             NOT NULL COMMENT 'Value date of the transaction',
+
+    CONSTRAINT PK_FACT_TRANSACTION PRIMARY KEY (SK_TRANSACTION_KEY)
+) COMMENT='Fact table for transactions';
