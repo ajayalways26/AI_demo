@@ -1,0 +1,30 @@
+CREATE OR REPLACE TABLE adam_data_engg_fsi_demo.EDW_STAGE.CUSTOMER_DOCUMENT (
+    COUNTRY_CODE          VARCHAR(4)                   COMMENT 'Represents the country code.',
+    CREATED_AT            TIMESTAMP_NTZ               COMMENT 'Timestamp when the record was created.',
+    CREATED_BY            VARCHAR(64)                 COMMENT 'User or process that created the record.',
+    CUSTOMER_ID           NUMBER(38,0) NOT NULL       COMMENT 'Unique identifier for the customer.',
+    DOCUMENT_ID           NUMBER(38,0) NOT NULL       COMMENT 'Unique identifier for the document.',
+    DOCUMENT_NUMBER       VARCHAR(64)                 COMMENT 'Document number, typically a reference for identification.',
+    DOCUMENT_STATUS       VARCHAR(32)                 COMMENT 'Status of the document.',
+    DOCUMENT_TYPE         VARCHAR(64) NOT NULL        COMMENT 'Type or classification of the document.',
+    EXPIRY_DATE           DATE                        COMMENT 'Expiration date of the document.',
+    FILE_FORMAT           VARCHAR(16)                 COMMENT 'Format of the file.',
+    FILE_PATH             VARCHAR(255)                COMMENT 'Path to the document file.',
+    ISSUED_BY             VARCHAR(128)                COMMENT 'Entity that issued the document.',
+    ISSUE_DATE            DATE                        COMMENT 'Date the document was issued.',
+    STG_CREATED_AT        TIMESTAMP_NTZ NOT NULL      COMMENT 'Timestamp when the staging record was created.',
+    STG_CREATED_BY        VARCHAR(64) NOT NULL        COMMENT 'User or process that created the staging record.',
+    STG_UPDATED_AT        TIMESTAMP_NTZ               COMMENT 'Timestamp when the staging record was last updated.',
+    STG_UPDATED_BY        VARCHAR(64)                 COMMENT 'User or process that last updated the staging record.',
+    UPDATED_AT            TIMESTAMP_NTZ               COMMENT 'Timestamp when the record was last updated.',
+    UPDATED_BY            VARCHAR(64)                 COMMENT 'User or process that last updated the record.',
+    VALID_FROM            TIMESTAMP_NTZ               COMMENT 'Timestamp marking the start of validity for the entry.',
+    VALID_TO              TIMESTAMP_NTZ               COMMENT 'Timestamp marking the end of validity for the entry.',
+    VERIFICATION_STATUS   VARCHAR(32)                 COMMENT 'Status of the verification process for the document.',
+    VERIFIED_AT           TIMESTAMP_NTZ               COMMENT 'Timestamp when the document was verified.',
+    VERIFIED_BY           VARCHAR(64)                 COMMENT 'User or process that verified the document.',
+
+    CONSTRAINT PK_CUSTOMER_DOCUMENT PRIMARY KEY (DOCUMENT_ID),
+    CONSTRAINT FK_CUSTOMER_DOCUMENT_CUSTOMER FOREIGN KEY (CUSTOMER_ID) REFERENCES adam_data_engg_fsi_demo.EDW_STAGE.CUSTOMER (CUSTOMER_ID)
+)
+COMMENT = 'Table containing customer documents and related metadata.';
