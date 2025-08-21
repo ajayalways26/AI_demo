@@ -1,2 +1,0 @@
-﻿database_name,table_name,column_name,column_position,data_type,full_data_type,is_nullable,default_value,max_length,numeric_precision,numeric_scale,key_type,extra_info,column_comment,table_type,storage_engine,estimated_rows,table_comment,is_primary_key,is_foreign_key,references_table,references_column
-adam_data_engg_fsi_demo_customer,customer,customer_id,1,bigint,bigint,NO,,,19,0,PRI,auto_increment,Unique identifier for the customer,BASE TABLE,InnoDB,9221,"Stores master customer data including demographic, segmentation, and audit attributes",YES,NO,,
