@@ -1,0 +1,28 @@
+CREATE OR REPLACE TABLE adam_data_engg_fsi_demo.EDW_MART.DIM_CUSTOMER_ADDRESS (
+    ADDRESS_ID                   BIGINT                            COMMENT 'Unique identifier for the address.',
+    ADDRESS_LINE1                VARCHAR(255)                     COMMENT 'First line of the address.',
+    ADDRESS_LINE2                VARCHAR(255)                     COMMENT 'Second line of the address.',
+    ADDRESS_STATUS               VARCHAR(16)                      COMMENT 'Status of the address (e.g., active/inactive).',
+    ADDRESS_TYPE                 VARCHAR(64)                      COMMENT 'Type of the address (e.g., residential/commercial).',
+    BUSINESS_COLUMN              VARCHAR(64)                      COMMENT 'Business-related metadata.',
+    CITY                         VARCHAR(128)                     COMMENT 'City of the address.',
+    COUNTRY                      VARCHAR(128)                     COMMENT 'Country of the address.',
+    CREATED_BY                   VARCHAR(64)                      COMMENT 'User who created the record.',
+    CREATE_BATCH_ID              VARCHAR(64)                      COMMENT 'Batch identifier for creation.',
+    CREATE_DATE_TIME             TIMESTAMP_NTZ                    COMMENT 'Timestamp when the record was created.',
+    CURRENT_FLAG                 CHAR                              COMMENT 'Indicates if the record is current (Y/N).',
+    CUSTOMER_ID                  BIGINT                            COMMENT 'Unique identifier for the customer.',
+    DATA_SOURCE                  VARCHAR(64)                      COMMENT 'Source of the data.',
+    EFFECTIVE_FROM               TIMESTAMP_NTZ        NOT NULL    COMMENT 'Timestamp when the record becomes valid.',
+    EFFECTIVE_TO                 TIMESTAMP_NTZ                    COMMENT 'Timestamp when the record becomes invalid.',
+    IS_DELETED                   CHAR                              COMMENT 'Indicates if the record is deleted (Y/N).',
+    POSTAL_CODE                  VARCHAR(64)                      COMMENT 'Postal code of the address.',
+    SK_CUSTOMER_ADDRESS_KEY      BIGINT             NOT NULL      COMMENT 'Surrogate key for the customer address.',
+    SK_CUSTOMER_KEY              BIGINT             NOT NULL      COMMENT 'Surrogate key for the customer.',
+    STATE                        VARCHAR(128)                     COMMENT 'State of the address.',
+    UPDATED_BY                   VARCHAR(64)                      COMMENT 'User who updated the record.',
+    UPDATE_BATCH_ID              VARCHAR(64)                      COMMENT 'Batch identifier for updates.',
+    UPDATE_DATE_TIME             TIMESTAMP_NTZ                    COMMENT 'Timestamp when the record was last updated.',
+
+    CONSTRAINT PK_DIM_CUSTOMER_ADDRESS PRIMARY KEY (SK_CUSTOMER_ADDRESS_KEY)
+) COMMENT = 'Dimension table for customer addresses storing details about address relationships and metadata.';
