@@ -1,35 +1,34 @@
 CREATE OR REPLACE TABLE adam_data_engg_fsi_demo.EDW_MART.DIM_CUSTOMER (
-    BUSINESS_COLUMN              STRING, -- Business-related information
-    CREATED_BY                   STRING, -- User who created the record
-    CREATE_BATCH_ID              STRING, -- Batch identifier for creation
-    CREATE_DATE_TIME             TIMESTAMP_NTZ, -- Date and time of creation
-    CURRENT_FLAG                 STRING, -- Indicates current status (e.g., 'Y' or 'N')
-    CUSTOMER_ID                  STRING NOT NULL, -- Unique identifier for the customer
-    CUSTOMER_NAME                STRING, -- Customer's name
-    CUSTOMER_SEGMENT             STRING, -- Segment classification of the customer
-    CUSTOMER_STATUS              STRING, -- Current status of the customer
-    CUSTOMER_TIMEZONE_OFFSET     STRING, -- Customer's timezone offset
-    CUSTOMER_TYPE                STRING, -- Type/classification of customer
-    DATA_SOURCE                  STRING, -- Source of data origin
-    DATE_OF_BIRTH                DATE, -- Customer's date of birth
-    EFFECTIVE_FROM               TIMESTAMP_NTZ NOT NULL, -- Start date for data validity
-    EFFECTIVE_TO                 TIMESTAMP_NTZ, -- End date for data validity
-    EMAIL_ADDRESS                STRING, -- Customer's email address
-    GENDER                       STRING, -- Gender of the customer
-    INCOME_LEVEL                 STRING, -- Customer's income level
-    IS_DELETED                   STRING, -- Flag for soft delete (e.g., 'Y' or 'N')
-    MARITAL_STATUS               STRING, -- Customer's marital status
-    MOBILE_NUMBER                STRING, -- Customer's mobile phone number
-    NATIONALITY                  STRING, -- Customer's nationality
-    OCCUPATION                   STRING, -- Customer's occupation
-    REGISTRATION_DATE            TIMESTAMP_NTZ, -- Customer's registration date
-    RESIDENCY_STATUS             STRING, -- Status of residency (e.g., permanent, temporary)
-    RISK_RATING                  STRING, -- Risk rating associated with the customer
-    SK_CUSTOMER_KEY              NUMBER(38,0) NOT NULL, -- Surrogate key for customer
-    UPDATED_BY                   STRING, -- User who last updated the record
-    UPDATE_BATCH_ID              STRING, -- Batch identifier for update
-    UPDATE_DATE_TIME             TIMESTAMP_NTZ, -- Date and time of last update
+    SK_CUSTOMER_KEY BIGINT NOT NULL COMMENT 'Surrogate Key for Customer',
+    BUSINESS_COLUMN VARCHAR(64) NULL COMMENT 'Business-related column',
+    CREATED_BY VARCHAR(64) NULL COMMENT 'User who created the record',
+    CREATE_BATCH_ID VARCHAR(64) NULL COMMENT 'Batch ID for creation',
+    CREATE_DATE_TIME TIMESTAMP NULL COMMENT 'Timestamp when the record was created',
+    CURRENT_FLAG CHAR(1) NULL COMMENT 'Flag indicating current record',
+    CUSTOMER_ID VARCHAR(64) NOT NULL COMMENT 'Unique Identifier for Customer',
+    CUSTOMER_NAME VARCHAR(128) NULL COMMENT 'Name of the Customer',
+    CUSTOMER_SEGMENT VARCHAR(64) NULL COMMENT 'Segment of the Customer',
+    CUSTOMER_STATUS VARCHAR(16) NULL COMMENT 'Status of the Customer',
+    CUSTOMER_TIMEZONE_OFFSET VARCHAR(8) NULL COMMENT 'Customer Time Zone Offset',
+    CUSTOMER_TYPE VARCHAR(64) NULL COMMENT 'Type of Customer',
+    DATA_SOURCE VARCHAR(64) NULL COMMENT 'Source of Data',
+    DATE_OF_BIRTH DATE NULL COMMENT 'Customer Date of Birth',
+    EFFECTIVE_FROM TIMESTAMP NOT NULL COMMENT 'Effective Start Date for the record',
+    EFFECTIVE_TO TIMESTAMP NULL COMMENT 'Effective End Date for the record',
+    EMAIL_ADDRESS VARCHAR(128) NULL COMMENT 'Customer Email Address',
+    GENDER VARCHAR(16) NULL COMMENT 'Gender of the Customer',
+    INCOME_LEVEL VARCHAR(64) NULL COMMENT 'Income Level of the Customer',
+    IS_DELETED CHAR(1) NULL COMMENT 'Flag indicating if record is deleted',
+    MARITAL_STATUS VARCHAR(64) NULL COMMENT 'Marital Status of the Customer',
+    MOBILE_NUMBER VARCHAR(16) NULL COMMENT 'Customer Mobile Number',
+    NATIONALITY VARCHAR(64) NULL COMMENT 'Nationality of the Customer',
+    OCCUPATION VARCHAR(128) NULL COMMENT 'Occupation of the Customer',
+    REGISTRATION_DATE TIMESTAMP NULL COMMENT 'Date when the Customer Registered',
+    RESIDENCY_STATUS VARCHAR(64) NULL COMMENT 'Residency Status of the Customer',
+    RISK_RATING VARCHAR(16) NULL COMMENT 'Risk Level of the Customer',
+    UPDATED_BY VARCHAR(64) NULL COMMENT 'User who updated the record',
+    UPDATE_BATCH_ID VARCHAR(64) NULL COMMENT 'Batch ID for update',
+    UPDATE_DATE_TIME TIMESTAMP NULL COMMENT 'Timestamp when the record was updated',
 
     CONSTRAINT PK_DIM_CUSTOMER PRIMARY KEY (SK_CUSTOMER_KEY)
-)
-COMMENT = 'Dimension table for customer data';
+);
