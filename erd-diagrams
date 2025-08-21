@@ -1,0 +1,627 @@
+{
+  "generation_timestamp": "2025-08-21T13:32:38.043931",
+  "summary": {
+    "total_databases": 3,
+    "total_tables": 20,
+    "total_relationships": 23,
+    "total_rows": 123959,
+    "total_columns": 222,
+    "cross_database_relationships": 3
+  },
+  "database_breakdown": [
+    {
+      "database_name": "adam_data_engg_fsi_demo_customer",
+      "table_count": 8,
+      "total_rows": 96514,
+      "total_columns": 104,
+      "relationship_density": 1.125
+    },
+    {
+      "database_name": "adam_data_engg_fsi_demo_account",
+      "table_count": 12,
+      "total_rows": 27445,
+      "total_columns": 118,
+      "relationship_density": 1.1666666666666667
+    },
+    {
+      "database_name": "adam_data_engg_fsi_demo_loan",
+      "table_count": 0,
+      "total_rows": 0,
+      "total_columns": 0,
+      "relationship_density": 0,
+      "note": "No accessible tables"
+    }
+  ],
+  "table_details": [
+    {
+      "full_name": "adam_data_engg_fsi_demo_customer.customer",
+      "database": "adam_data_engg_fsi_demo_customer",
+      "table_name": "customer",
+      "column_count": 17,
+      "primary_key_count": 1,
+      "foreign_key_count": 0,
+      "row_count": 9221,
+      "has_relationships": false
+    },
+    {
+      "full_name": "adam_data_engg_fsi_demo_customer.customer_address",
+      "database": "adam_data_engg_fsi_demo_customer",
+      "table_name": "customer_address",
+      "column_count": 16,
+      "primary_key_count": 1,
+      "foreign_key_count": 1,
+      "row_count": 14887,
+      "has_relationships": true
+    },
+    {
+      "full_name": "adam_data_engg_fsi_demo_customer.customer_contact",
+      "database": "adam_data_engg_fsi_demo_customer",
+      "table_name": "customer_contact",
+      "column_count": 13,
+      "primary_key_count": 1,
+      "foreign_key_count": 1,
+      "row_count": 19988,
+      "has_relationships": true
+    },
+    {
+      "full_name": "adam_data_engg_fsi_demo_customer.customer_document",
+      "database": "adam_data_engg_fsi_demo_customer",
+      "table_name": "customer_document",
+      "column_count": 20,
+      "primary_key_count": 1,
+      "foreign_key_count": 1,
+      "row_count": 14906,
+      "has_relationships": true
+    },
+    {
+      "full_name": "adam_data_engg_fsi_demo_customer.customer_kyc_status",
+      "database": "adam_data_engg_fsi_demo_customer",
+      "table_name": "customer_kyc_status",
+      "column_count": 10,
+      "primary_key_count": 1,
+      "foreign_key_count": 1,
+      "row_count": 9861,
+      "has_relationships": true
+    },
+    {
+      "full_name": "adam_data_engg_fsi_demo_customer.customer_preference",
+      "database": "adam_data_engg_fsi_demo_customer",
+      "table_name": "customer_preference",
+      "column_count": 11,
+      "primary_key_count": 1,
+      "foreign_key_count": 1,
+      "row_count": 9819,
+      "has_relationships": true
+    },
+    {
+      "full_name": "adam_data_engg_fsi_demo_customer.customer_relationship",
+      "database": "adam_data_engg_fsi_demo_customer",
+      "table_name": "customer_relationship",
+      "column_count": 11,
+      "primary_key_count": 1,
+      "foreign_key_count": 2,
+      "row_count": 2000,
+      "has_relationships": true
+    },
+    {
+      "full_name": "adam_data_engg_fsi_demo_customer.kyc_document_map",
+      "database": "adam_data_engg_fsi_demo_customer",
+      "table_name": "kyc_document_map",
+      "column_count": 6,
+      "primary_key_count": 2,
+      "foreign_key_count": 2,
+      "row_count": 15832,
+      "has_relationships": true
+    },
+    {
+      "full_name": "adam_data_engg_fsi_demo_account.account",
+      "database": "adam_data_engg_fsi_demo_account",
+      "table_name": "account",
+      "column_count": 13,
+      "primary_key_count": 1,
+      "foreign_key_count": 4,
+      "row_count": 4849,
+      "has_relationships": true
+    },
+    {
+      "full_name": "adam_data_engg_fsi_demo_account.account_balance",
+      "database": "adam_data_engg_fsi_demo_account",
+      "table_name": "account_balance",
+      "column_count": 8,
+      "primary_key_count": 3,
+      "foreign_key_count": 2,
+      "row_count": 7512,
+      "has_relationships": true
+    },
+    {
+      "full_name": "adam_data_engg_fsi_demo_account.account_balance_type",
+      "database": "adam_data_engg_fsi_demo_account",
+      "table_name": "account_balance_type",
+      "column_count": 9,
+      "primary_key_count": 1,
+      "foreign_key_count": 0,
+      "row_count": 2,
+      "has_relationships": false
+    },
+    {
+      "full_name": "adam_data_engg_fsi_demo_account.account_fee",
+      "database": "adam_data_engg_fsi_demo_account",
+      "table_name": "account_fee",
+      "column_count": 13,
+      "primary_key_count": 1,
+      "foreign_key_count": 2,
+      "row_count": 5072,
+      "has_relationships": true
+    },
+    {
+      "full_name": "adam_data_engg_fsi_demo_account.account_fee_category",
+      "database": "adam_data_engg_fsi_demo_account",
+      "table_name": "account_fee_category",
+      "column_count": 8,
+      "primary_key_count": 1,
+      "foreign_key_count": 0,
+      "row_count": 2,
+      "has_relationships": false
+    },
+    {
+      "full_name": "adam_data_engg_fsi_demo_account.account_fee_code",
+      "database": "adam_data_engg_fsi_demo_account",
+      "table_name": "account_fee_code",
+      "column_count": 14,
+      "primary_key_count": 1,
+      "foreign_key_count": 1,
+      "row_count": 3,
+      "has_relationships": true
+    },
+    {
+      "full_name": "adam_data_engg_fsi_demo_account.account_holder",
+      "database": "adam_data_engg_fsi_demo_account",
+      "table_name": "account_holder",
+      "column_count": 8,
+      "primary_key_count": 2,
+      "foreign_key_count": 3,
+      "row_count": 5000,
+      "has_relationships": true
+    },
+    {
+      "full_name": "adam_data_engg_fsi_demo_account.account_limit",
+      "database": "adam_data_engg_fsi_demo_account",
+      "table_name": "account_limit",
+      "column_count": 9,
+      "primary_key_count": 3,
+      "foreign_key_count": 2,
+      "row_count": 4995,
+      "has_relationships": true
+    },
+    {
+      "full_name": "adam_data_engg_fsi_demo_account.account_limit_type",
+      "database": "adam_data_engg_fsi_demo_account",
+      "table_name": "account_limit_type",
+      "column_count": 9,
+      "primary_key_count": 1,
+      "foreign_key_count": 0,
+      "row_count": 2,
+      "has_relationships": false
+    },
+    {
+      "full_name": "adam_data_engg_fsi_demo_account.account_role_type",
+      "database": "adam_data_engg_fsi_demo_account",
+      "table_name": "account_role_type",
+      "column_count": 9,
+      "primary_key_count": 1,
+      "foreign_key_count": 0,
+      "row_count": 2,
+      "has_relationships": false
+    },
+    {
+      "full_name": "adam_data_engg_fsi_demo_account.account_status",
+      "database": "adam_data_engg_fsi_demo_account",
+      "table_name": "account_status",
+      "column_count": 7,
+      "primary_key_count": 1,
+      "foreign_key_count": 0,
+      "row_count": 3,
+      "has_relationships": false
+    },
+    {
+      "full_name": "adam_data_engg_fsi_demo_account.account_type",
+      "database": "adam_data_engg_fsi_demo_account",
+      "table_name": "account_type",
+      "column_count": 11,
+      "primary_key_count": 1,
+      "foreign_key_count": 0,
+      "row_count": 3,
+      "has_relationships": false
+    }
+  ],
+  "relationship_details": [
+    {
+      "from_table": "adam_data_engg_fsi_demo_customer.customer_address",
+      "from_column": "customer_id",
+      "to_table": "adam_data_engg_fsi_demo_customer.customer",
+      "to_column": "customer_id",
+      "constraint_name": "fk_customer_address_customer",
+      "is_cross_database": false
+    },
+    {
+      "from_table": "adam_data_engg_fsi_demo_customer.customer_contact",
+      "from_column": "customer_id",
+      "to_table": "adam_data_engg_fsi_demo_customer.customer",
+      "to_column": "customer_id",
+      "constraint_name": "fk_customer_contact_customer_id",
+      "is_cross_database": false
+    },
+    {
+      "from_table": "adam_data_engg_fsi_demo_customer.customer_document",
+      "from_column": "customer_id",
+      "to_table": "adam_data_engg_fsi_demo_customer.customer",
+      "to_column": "customer_id",
+      "constraint_name": "fk_customer_document_customer",
+      "is_cross_database": false
+    },
+    {
+      "from_table": "adam_data_engg_fsi_demo_customer.customer_kyc_status",
+      "from_column": "customer_id",
+      "to_table": "adam_data_engg_fsi_demo_customer.customer",
+      "to_column": "customer_id",
+      "constraint_name": "fk_kyc_customer",
+      "is_cross_database": false
+    },
+    {
+      "from_table": "adam_data_engg_fsi_demo_customer.customer_preference",
+      "from_column": "customer_id",
+      "to_table": "adam_data_engg_fsi_demo_customer.customer",
+      "to_column": "customer_id",
+      "constraint_name": "fk_customer_pref_customer",
+      "is_cross_database": false
+    },
+    {
+      "from_table": "adam_data_engg_fsi_demo_customer.customer_relationship",
+      "from_column": "customer_id",
+      "to_table": "adam_data_engg_fsi_demo_customer.customer",
+      "to_column": "customer_id",
+      "constraint_name": "fk_customer_relationship_customer",
+      "is_cross_database": false
+    },
+    {
+      "from_table": "adam_data_engg_fsi_demo_customer.customer_relationship",
+      "from_column": "related_customer_id",
+      "to_table": "adam_data_engg_fsi_demo_customer.customer",
+      "to_column": "customer_id",
+      "constraint_name": "fk_customer_relationship_related_customer",
+      "is_cross_database": false
+    },
+    {
+      "from_table": "adam_data_engg_fsi_demo_customer.kyc_document_map",
+      "from_column": "document_id",
+      "to_table": "adam_data_engg_fsi_demo_customer.customer_document",
+      "to_column": "document_id",
+      "constraint_name": "fk_kdm_doc",
+      "is_cross_database": false
+    },
+    {
+      "from_table": "adam_data_engg_fsi_demo_customer.kyc_document_map",
+      "from_column": "kyc_status_id",
+      "to_table": "adam_data_engg_fsi_demo_customer.customer_kyc_status",
+      "to_column": "kyc_status_id",
+      "constraint_name": "fk_kdm_kyc",
+      "is_cross_database": false
+    },
+    {
+      "from_table": "adam_data_engg_fsi_demo_account.account",
+      "from_column": "customer_id",
+      "to_table": "adam_data_engg_fsi_demo_customer.customer",
+      "to_column": "customer_id",
+      "constraint_name": "fk_account_customer",
+      "is_cross_database": true
+    },
+    {
+      "from_table": "adam_data_engg_fsi_demo_account.account",
+      "from_column": "product_id",
+      "to_table": "adam_data_engg_fsi_demo_product.product",
+      "to_column": "product_id",
+      "constraint_name": "fk_account_product",
+      "is_cross_database": true
+    },
+    {
+      "from_table": "adam_data_engg_fsi_demo_account.account",
+      "from_column": "status_id",
+      "to_table": "adam_data_engg_fsi_demo_account.account_status",
+      "to_column": "account_status_id",
+      "constraint_name": "fk_account_status",
+      "is_cross_database": false
+    },
+    {
+      "from_table": "adam_data_engg_fsi_demo_account.account",
+      "from_column": "account_type_id",
+      "to_table": "adam_data_engg_fsi_demo_account.account_type",
+      "to_column": "account_type_id",
+      "constraint_name": "fk_account_type",
+      "is_cross_database": false
+    },
+    {
+      "from_table": "adam_data_engg_fsi_demo_account.account_balance",
+      "from_column": "account_balance_type_id",
+      "to_table": "adam_data_engg_fsi_demo_account.account_balance_type",
+      "to_column": "account_balance_type_id",
+      "constraint_name": "fk_account_balance_type_id",
+      "is_cross_database": false
+    },
+    {
+      "from_table": "adam_data_engg_fsi_demo_account.account_balance",
+      "from_column": "account_id",
+      "to_table": "adam_data_engg_fsi_demo_account.account",
+      "to_column": "account_id",
+      "constraint_name": "fk_balance_account",
+      "is_cross_database": false
+    },
+    {
+      "from_table": "adam_data_engg_fsi_demo_account.account_fee",
+      "from_column": "account_id",
+      "to_table": "adam_data_engg_fsi_demo_account.account",
+      "to_column": "account_id",
+      "constraint_name": "fk_account_fee_account",
+      "is_cross_database": false
+    },
+    {
+      "from_table": "adam_data_engg_fsi_demo_account.account_fee",
+      "from_column": "account_fee_code_id",
+      "to_table": "adam_data_engg_fsi_demo_account.account_fee_code",
+      "to_column": "account_fee_code_id",
+      "constraint_name": "fk_account_fee_code",
+      "is_cross_database": false
+    },
+    {
+      "from_table": "adam_data_engg_fsi_demo_account.account_fee_code",
+      "from_column": "account_fee_category_id",
+      "to_table": "adam_data_engg_fsi_demo_account.account_fee_category",
+      "to_column": "account_fee_category_id",
+      "constraint_name": "fk_account_fee_category",
+      "is_cross_database": false
+    },
+    {
+      "from_table": "adam_data_engg_fsi_demo_account.account_holder",
+      "from_column": "account_role_id",
+      "to_table": "adam_data_engg_fsi_demo_account.account_role_type",
+      "to_column": "account_role_id",
+      "constraint_name": "fk_account_role_type",
+      "is_cross_database": false
+    },
+    {
+      "from_table": "adam_data_engg_fsi_demo_account.account_holder",
+      "from_column": "account_id",
+      "to_table": "adam_data_engg_fsi_demo_account.account",
+      "to_column": "account_id",
+      "constraint_name": "fk_holder_account",
+      "is_cross_database": false
+    },
+    {
+      "from_table": "adam_data_engg_fsi_demo_account.account_holder",
+      "from_column": "customer_id",
+      "to_table": "adam_data_engg_fsi_demo_customer.customer",
+      "to_column": "customer_id",
+      "constraint_name": "fk_holder_customer",
+      "is_cross_database": true
+    },
+    {
+      "from_table": "adam_data_engg_fsi_demo_account.account_limit",
+      "from_column": "account_limit_type_id",
+      "to_table": "adam_data_engg_fsi_demo_account.account_limit_type",
+      "to_column": "account_limit_type_id",
+      "constraint_name": "fk_account_limit_type",
+      "is_cross_database": false
+    },
+    {
+      "from_table": "adam_data_engg_fsi_demo_account.account_limit",
+      "from_column": "account_id",
+      "to_table": "adam_data_engg_fsi_demo_account.account",
+      "to_column": "account_id",
+      "constraint_name": "fk_limit_account",
+      "is_cross_database": false
+    }
+  ],
+  "largest_tables": [
+    {
+      "full_name": "adam_data_engg_fsi_demo_customer.customer_contact",
+      "database": "adam_data_engg_fsi_demo_customer",
+      "table_name": "customer_contact",
+      "column_count": 13,
+      "primary_key_count": 1,
+      "foreign_key_count": 1,
+      "row_count": 19988,
+      "has_relationships": true
+    },
+    {
+      "full_name": "adam_data_engg_fsi_demo_customer.kyc_document_map",
+      "database": "adam_data_engg_fsi_demo_customer",
+      "table_name": "kyc_document_map",
+      "column_count": 6,
+      "primary_key_count": 2,
+      "foreign_key_count": 2,
+      "row_count": 15832,
+      "has_relationships": true
+    },
+    {
+      "full_name": "adam_data_engg_fsi_demo_customer.customer_document",
+      "database": "adam_data_engg_fsi_demo_customer",
+      "table_name": "customer_document",
+      "column_count": 20,
+      "primary_key_count": 1,
+      "foreign_key_count": 1,
+      "row_count": 14906,
+      "has_relationships": true
+    },
+    {
+      "full_name": "adam_data_engg_fsi_demo_customer.customer_address",
+      "database": "adam_data_engg_fsi_demo_customer",
+      "table_name": "customer_address",
+      "column_count": 16,
+      "primary_key_count": 1,
+      "foreign_key_count": 1,
+      "row_count": 14887,
+      "has_relationships": true
+    },
+    {
+      "full_name": "adam_data_engg_fsi_demo_customer.customer_kyc_status",
+      "database": "adam_data_engg_fsi_demo_customer",
+      "table_name": "customer_kyc_status",
+      "column_count": 10,
+      "primary_key_count": 1,
+      "foreign_key_count": 1,
+      "row_count": 9861,
+      "has_relationships": true
+    },
+    {
+      "full_name": "adam_data_engg_fsi_demo_customer.customer_preference",
+      "database": "adam_data_engg_fsi_demo_customer",
+      "table_name": "customer_preference",
+      "column_count": 11,
+      "primary_key_count": 1,
+      "foreign_key_count": 1,
+      "row_count": 9819,
+      "has_relationships": true
+    },
+    {
+      "full_name": "adam_data_engg_fsi_demo_customer.customer",
+      "database": "adam_data_engg_fsi_demo_customer",
+      "table_name": "customer",
+      "column_count": 17,
+      "primary_key_count": 1,
+      "foreign_key_count": 0,
+      "row_count": 9221,
+      "has_relationships": false
+    },
+    {
+      "full_name": "adam_data_engg_fsi_demo_account.account_balance",
+      "database": "adam_data_engg_fsi_demo_account",
+      "table_name": "account_balance",
+      "column_count": 8,
+      "primary_key_count": 3,
+      "foreign_key_count": 2,
+      "row_count": 7512,
+      "has_relationships": true
+    },
+    {
+      "full_name": "adam_data_engg_fsi_demo_account.account_fee",
+      "database": "adam_data_engg_fsi_demo_account",
+      "table_name": "account_fee",
+      "column_count": 13,
+      "primary_key_count": 1,
+      "foreign_key_count": 2,
+      "row_count": 5072,
+      "has_relationships": true
+    },
+    {
+      "full_name": "adam_data_engg_fsi_demo_account.account_holder",
+      "database": "adam_data_engg_fsi_demo_account",
+      "table_name": "account_holder",
+      "column_count": 8,
+      "primary_key_count": 2,
+      "foreign_key_count": 3,
+      "row_count": 5000,
+      "has_relationships": true
+    }
+  ],
+  "most_connected_tables": [
+    {
+      "full_name": "adam_data_engg_fsi_demo_account.account",
+      "database": "adam_data_engg_fsi_demo_account",
+      "table_name": "account",
+      "column_count": 13,
+      "primary_key_count": 1,
+      "foreign_key_count": 4,
+      "row_count": 4849,
+      "has_relationships": true
+    },
+    {
+      "full_name": "adam_data_engg_fsi_demo_account.account_holder",
+      "database": "adam_data_engg_fsi_demo_account",
+      "table_name": "account_holder",
+      "column_count": 8,
+      "primary_key_count": 2,
+      "foreign_key_count": 3,
+      "row_count": 5000,
+      "has_relationships": true
+    },
+    {
+      "full_name": "adam_data_engg_fsi_demo_customer.customer_relationship",
+      "database": "adam_data_engg_fsi_demo_customer",
+      "table_name": "customer_relationship",
+      "column_count": 11,
+      "primary_key_count": 1,
+      "foreign_key_count": 2,
+      "row_count": 2000,
+      "has_relationships": true
+    },
+    {
+      "full_name": "adam_data_engg_fsi_demo_customer.kyc_document_map",
+      "database": "adam_data_engg_fsi_demo_customer",
+      "table_name": "kyc_document_map",
+      "column_count": 6,
+      "primary_key_count": 2,
+      "foreign_key_count": 2,
+      "row_count": 15832,
+      "has_relationships": true
+    },
+    {
+      "full_name": "adam_data_engg_fsi_demo_account.account_balance",
+      "database": "adam_data_engg_fsi_demo_account",
+      "table_name": "account_balance",
+      "column_count": 8,
+      "primary_key_count": 3,
+      "foreign_key_count": 2,
+      "row_count": 7512,
+      "has_relationships": true
+    },
+    {
+      "full_name": "adam_data_engg_fsi_demo_account.account_fee",
+      "database": "adam_data_engg_fsi_demo_account",
+      "table_name": "account_fee",
+      "column_count": 13,
+      "primary_key_count": 1,
+      "foreign_key_count": 2,
+      "row_count": 5072,
+      "has_relationships": true
+    },
+    {
+      "full_name": "adam_data_engg_fsi_demo_account.account_limit",
+      "database": "adam_data_engg_fsi_demo_account",
+      "table_name": "account_limit",
+      "column_count": 9,
+      "primary_key_count": 3,
+      "foreign_key_count": 2,
+      "row_count": 4995,
+      "has_relationships": true
+    },
+    {
+      "full_name": "adam_data_engg_fsi_demo_customer.customer_address",
+      "database": "adam_data_engg_fsi_demo_customer",
+      "table_name": "customer_address",
+      "column_count": 16,
+      "primary_key_count": 1,
+      "foreign_key_count": 1,
+      "row_count": 14887,
+      "has_relationships": true
+    },
+    {
+      "full_name": "adam_data_engg_fsi_demo_customer.customer_contact",
+      "database": "adam_data_engg_fsi_demo_customer",
+      "table_name": "customer_contact",
+      "column_count": 13,
+      "primary_key_count": 1,
+      "foreign_key_count": 1,
+      "row_count": 19988,
+      "has_relationships": true
+    },
+    {
+      "full_name": "adam_data_engg_fsi_demo_customer.customer_document",
+      "database": "adam_data_engg_fsi_demo_customer",
+      "table_name": "customer_document",
+      "column_count": 20,
+      "primary_key_count": 1,
+      "foreign_key_count": 1,
+      "row_count": 14906,
+      "has_relationships": true
+    }
+  ]
+}
