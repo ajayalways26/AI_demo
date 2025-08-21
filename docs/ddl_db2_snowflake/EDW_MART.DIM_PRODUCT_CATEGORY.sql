@@ -1,24 +1,22 @@
 CREATE OR REPLACE TABLE adam_data_engg_fsi_demo.EDW_MART.DIM_PRODUCT_CATEGORY (
-    SK_PRODUCT_CATEGORY_KEY BIGINT NOT NULL, -- Primary surrogate key for the product category dimension
-    PRODUCT_CATEGORY_CODE VARCHAR(64), -- Business code for the product category
-    PRODUCT_CATEGORY_NAME VARCHAR(128), -- Name of the product category
-    DESCRIPTION VARCHAR(255), -- Description of the product category
-    EFFECTIVE_FROM TIMESTAMP_NTZ NOT NULL, -- Effective start date and time
-    EFFECTIVE_TO TIMESTAMP_NTZ, -- Effective end date and time
-    CURRENT_FLAG CHAR(1), -- Flag indicating whether the record is current
-    IS_DELETED CHAR(1), -- Flag indicating if the record is deleted
-    CREATED_BY VARCHAR(64), -- User who created the record
-    UPDATED_BY VARCHAR(64), -- User who last updated the record
-    CREATE_DATE_TIME TIMESTAMP_NTZ, -- Date and time the record was created
-    UPDATE_DATE_TIME TIMESTAMP_NTZ, -- Date and time the record was last updated
-    DATA_SOURCE VARCHAR(64), -- Source of the data
-    CREATE_BATCH_ID BIGINT, -- Batch ID for creation process
-    UPDATE_BATCH_ID BIGINT, -- Batch ID for update process
-    BUSINESS_COLUMN VARCHAR(64), -- Custom business column
-    PRODUCT_CATEGORY_ID BIGINT, -- Product category identifier
-    STATUS_ID BIGINT, -- Status identifier
+    BUSINESS_COLUMN             STRING                     COMMENT 'Mapped from DB2 column BUSINESS_COLUMN (VARCHAR(64))',
+    CREATED_BY                  STRING                     COMMENT 'Mapped from DB2 column CREATED_BY (VARCHAR(64))',
+    CREATE_BATCH_ID             NUMBER                     COMMENT 'Mapped from DB2 column CREATE_BATCH_ID (BIGINT)',
+    CREATE_DATE_TIME            TIMESTAMP_NTZ              COMMENT 'Mapped from DB2 column CREATE_DATE_TIME (TIMESTAMP)',
+    CURRENT_FLAG                CHAR(1)                    COMMENT 'Mapped from DB2 column CURRENT_FLAG (CHARACTER(1))',
+    DATA_SOURCE                 STRING                     COMMENT 'Mapped from DB2 column DATA_SOURCE (VARCHAR(64))',
+    DESCRIPTION                 STRING                     COMMENT 'Mapped from DB2 column DESCRIPTION (VARCHAR(255))',
+    EFFECTIVE_FROM              TIMESTAMP_NTZ              NOT NULL COMMENT 'Mapped from DB2 column EFFECTIVE_FROM (TIMESTAMP)',
+    EFFECTIVE_TO                TIMESTAMP_NTZ              COMMENT 'Mapped from DB2 column EFFECTIVE_TO (TIMESTAMP)',
+    IS_DELETED                  CHAR(1)                    COMMENT 'Mapped from DB2 column IS_DELETED (CHARACTER(1))',
+    PRODUCT_CATEGORY_CODE       STRING                     COMMENT 'Mapped from DB2 column PRODUCT_CATEGORY_CODE (VARCHAR(64))',
+    PRODUCT_CATEGORY_ID         NUMBER                     COMMENT 'Mapped from DB2 column PRODUCT_CATEGORY_ID (BIGINT)',
+    PRODUCT_CATEGORY_NAME       STRING                     COMMENT 'Mapped from DB2 column PRODUCT_CATEGORY_NAME (VARCHAR(128))',
+    SK_PRODUCT_CATEGORY_KEY     NUMBER                     NOT NULL COMMENT 'Mapped from DB2 column SK_PRODUCT_CATEGORY_KEY (BIGINT)',
+    STATUS_ID                   NUMBER                     COMMENT 'Mapped from DB2 column STATUS_ID (BIGINT)',
+    UPDATED_BY                  STRING                     COMMENT 'Mapped from DB2 column UPDATED_BY (VARCHAR(64))',
+    UPDATE_BATCH_ID             NUMBER                     COMMENT 'Mapped from DB2 column UPDATE_BATCH_ID (BIGINT)',
+    UPDATE_DATE_TIME            TIMESTAMP_NTZ              COMMENT 'Mapped from DB2 column UPDATE_DATE_TIME (TIMESTAMP)',
 
     CONSTRAINT PK_DIM_PRODUCT_CATEGORY PRIMARY KEY (SK_PRODUCT_CATEGORY_KEY)
-);
-
--- Proper comments added for Snowflake best practices
+) COMMENT = 'Table DIM_PRODUCT_CATEGORY migrated from DB2 schema EDW_MART';
