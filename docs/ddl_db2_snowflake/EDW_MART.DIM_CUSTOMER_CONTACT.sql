@@ -1,0 +1,22 @@
+CREATE OR REPLACE TABLE adam_data_engg_fsi_demo.EDW_MART.DIM_CUSTOMER_CONTACT (
+    BUSINESS_COLUMN      STRING COMMENT 'Corresponds to DB2 column BUSINESS_COLUMN with type VARCHAR(64)',
+    CONTACT_ID           BIGINT COMMENT 'Corresponds to DB2 column CONTACT_ID with type BIGINT',
+    CONTACT_METHOD       STRING COMMENT 'Corresponds to DB2 column CONTACT_METHOD with type VARCHAR(16)',
+    CONTACT_TYPE         STRING COMMENT 'Corresponds to DB2 column CONTACT_TYPE with type VARCHAR(64)',
+    CONTACT_VALUE        STRING COMMENT 'Corresponds to DB2 column CONTACT_VALUE with type VARCHAR(255)',
+    CREATED_BY           STRING COMMENT 'Corresponds to DB2 column CREATED_BY with type VARCHAR(64)',
+    CREATE_BATCH_ID      STRING COMMENT 'Corresponds to DB2 column CREATE_BATCH_ID with type VARCHAR(64)',
+    CREATE_DATE_TIME     TIMESTAMP_NTZ COMMENT 'Corresponds to DB2 column CREATE_DATE_TIME with type TIMESTAMP',
+    CURRENT_FLAG         STRING COMMENT 'Corresponds to DB2 column CURRENT_FLAG with type CHARACTER(1)',
+    CUSTOMER_ID          BIGINT COMMENT 'Corresponds to DB2 column CUSTOMER_ID with type BIGINT',
+    DATA_SOURCE          STRING COMMENT 'Corresponds to DB2 column DATA_SOURCE with type VARCHAR(64)',
+    EFFECTIVE_FROM       TIMESTAMP_NTZ NOT NULL COMMENT 'Corresponds to DB2 column EFFECTIVE_FROM with type TIMESTAMP',
+    EFFECTIVE_TO         TIMESTAMP_NTZ COMMENT 'Corresponds to DB2 column EFFECTIVE_TO with type TIMESTAMP',
+    IS_DELETED           STRING COMMENT 'Corresponds to DB2 column IS_DELETED with type CHARACTER(1)',
+    IS_PRIMARY           BOOLEAN COMMENT 'Corresponds to DB2 column IS_PRIMARY with type SMALLINT',
+    SK_CUSTOMER_CONTACT_KEY BIGINT NOT NULL COMMENT 'Corresponds to DB2 column SK_CUSTOMER_CONTACT_KEY with type BIGINT',
+    SK_CUSTOMER_KEY      BIGINT NOT NULL COMMENT 'Corresponds to DB2 column SK_CUSTOMER_KEY with type BIGINT',
+    UPDATED_BY           STRING COMMENT 'Corresponds to DB2 column UPDATED_BY with type VARCHAR(64)',
+    UPDATE_BATCH_ID      STRING COMMENT 'Corresponds to DB2 column UPDATE_BATCH_ID with type VARCHAR(64)',
+    UPDATE_DATE_TIME     TIMESTAMP_NTZ COMMENT 'Corresponds to DB2 column UPDATE_DATE_TIME with type TIMESTAMP'
+)
