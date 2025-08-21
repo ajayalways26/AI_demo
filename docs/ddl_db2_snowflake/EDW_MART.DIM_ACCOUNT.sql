@@ -1,29 +1,30 @@
 CREATE OR REPLACE TABLE adam_data_engg_fsi_demo.EDW_MART.DIM_ACCOUNT (
-    ACCOUNT_ID                  VARCHAR(64), -- \"Account identifier\"
-    ACCOUNT_NAME                VARCHAR(128), -- \"Account name\"
-    ACCOUNT_NUMBER              VARCHAR(64), -- \"Account number\"
-    ACCOUNT_TYPE_ID             BIGINT, -- \"Identifier for account type\"
-    BUSINESS_COLUMN             VARCHAR(64), -- \"Business metadata column\"
-    CLOSE_DATE                  DATE, -- \"Date when the account was closed\"
-    CREATED_BY                  VARCHAR(64), -- \"User who created the record\"
-    CREATE_BATCH_ID             BIGINT, -- \"Batch ID when the record was created\"
-    CREATE_DATE_TIME            TIMESTAMP_NTZ, -- \"Timestamp when the record was created\"
-    CURRENCY_CODE               VARCHAR(64), -- \"Currency code associated with the account\"
-    CURRENT_FLAG                CHAR(1), -- \"Flag to mark if the record is current\"
-    CUSTOMER_ID                 BIGINT, -- \"Identifier for the customer\"
-    DATA_SOURCE                 VARCHAR(64), -- \"Source of the data\"
-    EFFECTIVE_FROM              TIMESTAMP_NTZ NOT NULL, -- \"Effective starting timestamp\"
-    EFFECTIVE_TO                TIMESTAMP_NTZ, -- \"Effective ending timestamp\"
-    IS_DELETED                  CHAR(1), -- \"Flag to mark if the record is deleted\"
-    OPEN_DATE                   DATE, -- \"Date when the account was opened\"
-    PRODUCT_ID                  BIGINT, -- \"Identifier for the product\"
-    SK_ACCOUNT_KEY              BIGINT NOT NULL, -- \"Surrogate key for account\"
-    SK_ACCOUNT_STATUS_KEY       BIGINT, -- \"Surrogate key for account status\"
-    SK_ACCOUNT_TYPE_KEY         BIGINT, -- \"Surrogate key for account type\"
-    SK_CUSTOMER_KEY             BIGINT, -- \"Surrogate key for customer\"
-    SK_PRODUCT_KEY              BIGINT, -- \"Surrogate key for product\"
-    STATUS_ID                   BIGINT, -- \"Identifier for account status\"
-    UPDATED_BY                  VARCHAR(64), -- \"User who last updated the record\"
-    UPDATE_BATCH_ID             BIGINT, -- \"Batch ID when the record was updated\"
-    UPDATE_DATE_TIME            TIMESTAMP_NTZ -- \"Timestamp when the record was updated\"
-);
+    ACCOUNT_ID VARCHAR(64) COMMENT 'Account ID',
+    ACCOUNT_NAME VARCHAR(128) COMMENT 'Account Name',
+    ACCOUNT_NUMBER VARCHAR(64) COMMENT 'Account Number',
+    ACCOUNT_TYPE_ID BIGINT COMMENT 'Account Type Identifier',
+    BUSINESS_COLUMN VARCHAR(64) COMMENT 'A business-specific column',
+    CLOSE_DATE DATE COMMENT 'Account close date',
+    CREATED_BY VARCHAR(64) COMMENT 'User who created the record',
+    CREATE_BATCH_ID BIGINT COMMENT 'Batch ID for record creation',
+    CREATE_DATE_TIME TIMESTAMP_NTZ COMMENT 'Record creation timestamp',
+    CURRENCY_CODE VARCHAR(64) COMMENT 'Currency code for the account',
+    CURRENT_FLAG CHAR(1) COMMENT 'Flag indicating if record is current',
+    CUSTOMER_ID BIGINT COMMENT 'Customer Identifier',
+    DATA_SOURCE VARCHAR(64) COMMENT 'Source of the data',
+    EFFECTIVE_FROM TIMESTAMP_NTZ NOT NULL COMMENT 'Start timestamp for record validity',
+    EFFECTIVE_TO TIMESTAMP_NTZ COMMENT 'End timestamp for record validity',
+    IS_DELETED CHAR(1) COMMENT 'Flag indicating deletion status',
+    OPEN_DATE DATE COMMENT 'Account open date',
+    PRODUCT_ID BIGINT COMMENT 'Product Identifier',
+    SK_ACCOUNT_KEY BIGINT NOT NULL COMMENT 'Surrogate key for account',
+    SK_ACCOUNT_STATUS_KEY BIGINT COMMENT 'Surrogate key for account status',
+    SK_ACCOUNT_TYPE_KEY BIGINT COMMENT 'Surrogate key for account type',
+    SK_CUSTOMER_KEY BIGINT COMMENT 'Surrogate key for customer',
+    SK_PRODUCT_KEY BIGINT COMMENT 'Surrogate key for product',
+    STATUS_ID BIGINT COMMENT 'Account status identifier',
+    UPDATED_BY VARCHAR(64) COMMENT 'User who last updated the record',
+    UPDATE_BATCH_ID BIGINT COMMENT 'Batch ID for last update',
+    UPDATE_DATE_TIME TIMESTAMP_NTZ COMMENT 'Last update timestamp',
+    CONSTRAINT PK_DIM_ACCOUNT PRIMARY KEY (SK_ACCOUNT_KEY)
+)
