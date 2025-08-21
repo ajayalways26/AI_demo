@@ -1,0 +1,20 @@
+CREATE OR REPLACE TABLE adam_data_engg_fsi_demo.EDW_MART.DIM_TRANSACTION_STATUS (
+    SK_TRANSACTION_STATUS_KEY BIGINT NOT NULL COMMENT 'Primary key for DIM_TRANSACTION_STATUS',
+    TRANSACTION_STATUS_CODE VARCHAR(64) NULL COMMENT 'Code representing transaction status',
+    TRANSACTION_STATUS_NAME VARCHAR(128) NULL COMMENT 'Name of the transaction status',
+    DESCRIPTION VARCHAR(255) NULL COMMENT 'Description of the transaction status',
+    CURRENT_FLAG CHAR(1) NULL COMMENT 'Flag indicating current status',
+    EFFECTIVE_FROM TIMESTAMP_NTZ(6) NOT NULL COMMENT 'Start date for transaction status effectiveness',
+    EFFECTIVE_TO TIMESTAMP_NTZ(6) NULL COMMENT 'End date for transaction status effectiveness',
+    IS_DELETED CHAR(1) NULL COMMENT 'Flag indicating if the record is logically deleted',
+    CREATED_BY VARCHAR(64) NULL COMMENT 'User ID of the creator',
+    UPDATED_BY VARCHAR(64) NULL COMMENT 'User ID of the last updater',
+    CREATE_DATE_TIME TIMESTAMP_NTZ(6) NULL COMMENT 'Record creation timestamp',
+    UPDATE_DATE_TIME TIMESTAMP_NTZ(6) NULL COMMENT 'Record last update timestamp',
+    DATA_SOURCE VARCHAR(64) NULL COMMENT 'Source system of the data',
+    CREATE_BATCH_ID BIGINT NULL COMMENT 'Batch ID for creation',
+    UPDATE_BATCH_ID BIGINT NULL COMMENT 'Batch ID for update',
+    TRANSACTION_STATUS_ID BIGINT NULL COMMENT 'Identifier for the transaction status',
+    BUSINESS_COLUMN VARCHAR(64) NULL COMMENT 'Additional business column description',
+    PRIMARY KEY (SK_TRANSACTION_STATUS_KEY)
+)
