@@ -1,21 +1,21 @@
 CREATE OR REPLACE TABLE adam_data_engg_fsi_demo.EDW_MART.DIM_ACCOUNT_LIMIT_TYPE (
-    ACCOUNT_LIMIT_TYPE_CODE   STRING(64), -- VARCHAR in DB2 with length 64
-    ACCOUNT_LIMIT_TYPE_ID     NUMBER(38,0), -- BIGINT in DB2
-    ACCOUNT_LIMIT_TYPE_NAME   STRING(128), -- VARCHAR in DB2 with length 128
-    BUSINESS_COLUMN           STRING(64), -- VARCHAR in DB2 with length 64
-    CREATED_BY                STRING(64), -- VARCHAR in DB2 with length 64
-    CREATE_BATCH_ID           NUMBER(38,0), -- BIGINT in DB2
-    CREATE_DATE_TIME          TIMESTAMP_NTZ, -- TIMESTAMP in DB2
-    CURRENT_FLAG              STRING(1), -- CHAR with length 1 in DB2
-    DATA_SOURCE               STRING(64), -- VARCHAR in DB2 with length 64
-    DESCRIPTION               STRING(255), -- VARCHAR in DB2 with length 255
-    EFFECTIVE_FROM            TIMESTAMP_NTZ NOT NULL, -- TIMESTAMP in DB2 marked as NOT NULL
-    EFFECTIVE_TO              TIMESTAMP_NTZ, -- TIMESTAMP in DB2
-    IS_DELETED                STRING(1), -- CHAR with length 1 in DB2
-    SK_ACCOUNT_LIMIT_TYPE_KEY NUMBER(38,0) NOT NULL, -- BIGINT PK in DB2 marked as NOT NULL
-    UNIT_OF_MEASURE           STRING(32), -- VARCHAR in DB2 with length 32
-    UPDATED_BY                STRING(64), -- VARCHAR in DB2 with length 64
-    UPDATE_BATCH_ID           NUMBER(38,0), -- BIGINT in DB2
-    UPDATE_DATE_TIME          TIMESTAMP_NTZ -- TIMESTAMP in DB2
-)
-COMMENT='Table migrated from DB2: DIM_ACCOUNT_LIMIT_TYPE';
+    ACCOUNT_LIMIT_TYPE_CODE VARCHAR(64) COMMENT 'Code representing the type of account limit.',
+    ACCOUNT_LIMIT_TYPE_ID BIGINT COMMENT 'Unique identifier for the account limit type.',
+    ACCOUNT_LIMIT_TYPE_NAME VARCHAR(128) COMMENT 'Descriptive name of the account limit type.',
+    BUSINESS_COLUMN VARCHAR(64) COMMENT 'Business-specific column for additional information.',
+    CREATED_BY VARCHAR(64) COMMENT 'User who created the record.',
+    CREATE_BATCH_ID BIGINT COMMENT 'Batch ID associated with the creation.',
+    CREATE_DATE_TIME TIMESTAMP_NTZ COMMENT 'Timestamp of record creation.',
+    CURRENT_FLAG CHAR(1) COMMENT 'Flag indicating if the record is current.',
+    DATA_SOURCE VARCHAR(64) COMMENT 'Source system of the data.',
+    DESCRIPTION VARCHAR(255) COMMENT 'Detailed description of the account limit type.',
+    EFFECTIVE_FROM TIMESTAMP_NTZ NOT NULL COMMENT 'Effective starting date and time for the record.',
+    EFFECTIVE_TO TIMESTAMP_NTZ COMMENT 'Effective ending date and time for the record.',
+    IS_DELETED CHAR(1) COMMENT 'Flag indicating if the record is deleted.',
+    SK_ACCOUNT_LIMIT_TYPE_KEY BIGINT NOT NULL COMMENT 'Primary key for the account limit type dimension.',
+    UNIT_OF_MEASURE VARCHAR(32) COMMENT 'Unit of measurement for the account limit.',
+    UPDATED_BY VARCHAR(64) COMMENT 'User who last updated the record.',
+    UPDATE_BATCH_ID BIGINT COMMENT 'Batch ID associated with the update.',
+    UPDATE_DATE_TIME TIMESTAMP_NTZ COMMENT 'Timestamp of last record update.',
+    CONSTRAINT PK_DIM_ACCOUNT_LIMIT_TYPE PRIMARY KEY (SK_ACCOUNT_LIMIT_TYPE_KEY)
+) COMMENT = 'Dimension table for account limit types.'
