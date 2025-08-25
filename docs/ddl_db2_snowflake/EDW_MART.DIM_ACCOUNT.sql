@@ -1,29 +1,29 @@
 CREATE OR REPLACE TABLE adam_data_engg_fsi_demo.EDW_MART.DIM_ACCOUNT (
-    ACCOUNT_ID                VARCHAR(64)             COMMENT 'Account identifier.',
-    ACCOUNT_NAME              VARCHAR(128)            COMMENT 'Name of the account.',
-    ACCOUNT_NUMBER            VARCHAR(64)             COMMENT 'Number associated with the account.',
-    ACCOUNT_TYPE_ID           NUMBER(38,0)            COMMENT 'Identifier for the account type.',
-    BUSINESS_COLUMN           VARCHAR(64)             COMMENT 'Business-related column.',
-    CLOSE_DATE                DATE                    COMMENT 'Date when the account was closed.',
-    CREATED_BY                VARCHAR(64)             COMMENT 'User who created the record.',
-    CREATE_BATCH_ID           NUMBER(38,0)            COMMENT 'Batch ID for creation process.',
-    CREATE_DATE_TIME          TIMESTAMP_NTZ           COMMENT 'Timestamp for when the record was created.',
-    CURRENCY_CODE             VARCHAR(64)             COMMENT 'Currency code for the account.',
-    CURRENT_FLAG              CHAR(1)                 COMMENT 'Flag indicating current status.',
-    CUSTOMER_ID               NUMBER(38,0)            COMMENT 'Identifier for the customer.',
-    DATA_SOURCE               VARCHAR(64)             COMMENT 'Source system for the data.',
-    EFFECTIVE_FROM            TIMESTAMP_NTZ NOT NULL  COMMENT 'Start timestamp for the record validity.',
-    EFFECTIVE_TO              TIMESTAMP_NTZ           COMMENT 'End timestamp for the record validity.',
-    IS_DELETED                CHAR(1)                 COMMENT 'Soft delete indicator.',
-    OPEN_DATE                 DATE                    COMMENT 'Date when the account was opened.',
-    PRODUCT_ID                NUMBER(38,0)            COMMENT 'Identifier for the associated product.',
-    SK_ACCOUNT_KEY            NUMBER(38,0) NOT NULL   COMMENT 'Surrogate key for account.',
-    SK_ACCOUNT_STATUS_KEY     NUMBER(38,0)            COMMENT 'Surrogate key for account status.',
-    SK_ACCOUNT_TYPE_KEY       NUMBER(38,0)            COMMENT 'Surrogate key for account type.',
-    SK_CUSTOMER_KEY           NUMBER(38,0)            COMMENT 'Surrogate key for customer.',
-    SK_PRODUCT_KEY            NUMBER(38,0)            COMMENT 'Surrogate key for product.',
-    STATUS_ID                 NUMBER(38,0)            COMMENT 'Status identifier for the account.',
-    UPDATED_BY                VARCHAR(64)             COMMENT 'User who last updated the record.',
-    UPDATE_BATCH_ID           NUMBER(38,0)            COMMENT 'Batch ID for update process.',
-    UPDATE_DATE_TIME          TIMESTAMP_NTZ           COMMENT 'Timestamp for the last update.'
-)
+    ACCOUNT_ID VARCHAR(64), -- Account identifier
+    ACCOUNT_NAME VARCHAR(128), -- Name of the account
+    ACCOUNT_NUMBER VARCHAR(64), -- Account number
+    ACCOUNT_TYPE_ID NUMBER(38,0), -- ID representing the account type
+    BUSINESS_COLUMN VARCHAR(64), -- Business-specific metadata
+    CLOSE_DATE DATE, -- Account close date
+    CREATED_BY VARCHAR(64), -- Creator of the record
+    CREATE_BATCH_ID NUMBER(38,0), -- Batch ID associated with creation
+    CREATE_DATE_TIME TIMESTAMP_NTZ, -- Record creation timestamp
+    CURRENCY_CODE VARCHAR(64), -- Currency associated with the account
+    CURRENT_FLAG STRING, -- Current flag indicator
+    CUSTOMER_ID NUMBER(38,0), -- ID of the customer linked to the account
+    DATA_SOURCE VARCHAR(64), -- Source system of the data
+    EFFECTIVE_FROM TIMESTAMP_NTZ NOT NULL, -- Start date of record validity
+    EFFECTIVE_TO TIMESTAMP_NTZ, -- End date of record validity
+    IS_DELETED STRING, -- Deletion indicator
+    OPEN_DATE DATE, -- Account open date
+    PRODUCT_ID NUMBER(38,0), -- Product linked to the account
+    SK_ACCOUNT_KEY NUMBER(38,0) NOT NULL, -- Surrogate key for account
+    SK_ACCOUNT_STATUS_KEY NUMBER(38,0), -- Surrogate key for account status
+    SK_ACCOUNT_TYPE_KEY NUMBER(38,0), -- Surrogate key for account type
+    SK_CUSTOMER_KEY NUMBER(38,0), -- Surrogate key for customer
+    SK_PRODUCT_KEY NUMBER(38,0), -- Surrogate key for product
+    STATUS_ID NUMBER(38,0), -- Account status identifier
+    UPDATED_BY VARCHAR(64), -- Modifier of the record
+    UPDATE_BATCH_ID NUMBER(38,0), -- Batch ID associated with updates
+    UPDATE_DATE_TIME TIMESTAMP_NTZ -- Record update timestamp
+);
