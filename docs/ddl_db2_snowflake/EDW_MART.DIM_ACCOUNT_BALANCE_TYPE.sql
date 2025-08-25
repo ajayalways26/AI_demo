@@ -1,23 +1,21 @@
 CREATE OR REPLACE TABLE adam_data_engg_fsi_demo.EDW_MART.DIM_ACCOUNT_BALANCE_TYPE (
-    ACCOUNT_BALANCE_TYPE_ID BIGINT,
-    BALANCE_TYPE_CODE VARCHAR(64),
-    BALANCE_TYPE_NAME VARCHAR(128),
-    BUSINESS_COLUMN VARCHAR(64),
-    CREATED_BY VARCHAR(64),
-    CREATE_BATCH_ID BIGINT,
-    CREATE_DATE_TIME TIMESTAMP_NTZ,
-    CURRENT_FLAG CHAR(1),
-    DATA_SOURCE VARCHAR(64),
-    DESCRIPTION VARCHAR(255),
-    EFFECTIVE_FROM TIMESTAMP_NTZ NOT NULL,
-    EFFECTIVE_TO TIMESTAMP_NTZ,
-    IS_DELETED CHAR(1),
-    SK_ACCOUNT_BALANCE_TYPE_KEY BIGINT NOT NULL,
-    STATUS_CODE VARCHAR(16),
-    UPDATED_BY VARCHAR(64),
-    UPDATE_BATCH_ID BIGINT,
-    UPDATE_DATE_TIME TIMESTAMP_NTZ,
-
-    PRIMARY KEY (SK_ACCOUNT_BALANCE_TYPE_KEY)
-)
-COMMENT = 'This table stores account balance types with audit columns and dimensional attributes.'
+    ACCOUNT_BALANCE_TYPE_ID BIGINT COMMENT 'Represents the unique identifier for account balance types.',
+    BALANCE_TYPE_CODE VARCHAR(64) COMMENT 'Code associated with the balance type.',
+    BALANCE_TYPE_NAME VARCHAR(128) COMMENT 'Name of the balance type.',
+    BUSINESS_COLUMN VARCHAR(64) COMMENT 'Custom business-related column.',
+    CREATED_BY VARCHAR(64) COMMENT 'User who created the record.',
+    CREATE_BATCH_ID BIGINT COMMENT 'Batch ID during record creation.',
+    CREATE_DATE_TIME TIMESTAMP_NTZ COMMENT 'Timestamp of record creation.',
+    CURRENT_FLAG CHAR(1) COMMENT 'Flag indicating current status.',
+    DATA_SOURCE VARCHAR(64) COMMENT 'Source of the data.',
+    DESCRIPTION VARCHAR(255) COMMENT 'Description of the account balance type.',
+    EFFECTIVE_FROM TIMESTAMP_NTZ NOT NULL COMMENT 'Start of the effective period.',
+    EFFECTIVE_TO TIMESTAMP_NTZ COMMENT 'End of the effective period.',
+    IS_DELETED CHAR(1) COMMENT 'Flag indicating deleted status.',
+    SK_ACCOUNT_BALANCE_TYPE_KEY BIGINT NOT NULL COMMENT 'Surrogate key for account balance type.',
+    STATUS_CODE VARCHAR(16) COMMENT 'Status code.',
+    UPDATED_BY VARCHAR(64) COMMENT 'User who updated the record.',
+    UPDATE_BATCH_ID BIGINT COMMENT 'Batch ID during record update.',
+    UPDATE_DATE_TIME TIMESTAMP_NTZ COMMENT 'Timestamp of record update.',
+    CONSTRAINT PK_DIM_ACCOUNT_BALANCE_TYPE PRIMARY KEY (SK_ACCOUNT_BALANCE_TYPE_KEY)
+) COMMENT = 'Dimension table containing account balance types.';
