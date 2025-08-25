@@ -1,31 +1,29 @@
 CREATE OR REPLACE TABLE adam_data_engg_fsi_demo.EDW_MART.DIM_ACCOUNT (
-    ACCOUNT_ID VARCHAR(64) COMMENT 'Account Identifier',
-    ACCOUNT_NAME VARCHAR(128) COMMENT 'Account Name',
-    ACCOUNT_NUMBER VARCHAR(64) COMMENT 'Account Number',
-    ACCOUNT_TYPE_ID BIGINT COMMENT 'Account Type Identifier',
-    BUSINESS_COLUMN VARCHAR(64) COMMENT 'Business Column',
-    CLOSE_DATE DATE COMMENT 'Close Date of the Account',
-    CREATED_BY VARCHAR(64) COMMENT 'Created By',
-    CREATE_BATCH_ID BIGINT COMMENT 'Create Batch ID',
-    CREATE_DATE_TIME TIMESTAMP_NTZ COMMENT 'Creation Date and Time',
-    CURRENCY_CODE VARCHAR(64) COMMENT 'Currency Code',
-    CURRENT_FLAG CHAR(1) COMMENT 'Indicates Current Status',
-    CUSTOMER_ID BIGINT COMMENT 'Identifier for the Customer',
-    DATA_SOURCE VARCHAR(64) COMMENT 'Source of Data',
-    EFFECTIVE_FROM TIMESTAMP_NTZ NOT NULL COMMENT 'Effective From Date',
-    EFFECTIVE_TO TIMESTAMP_NTZ COMMENT 'Effective To Date',
-    IS_DELETED CHAR(1) COMMENT 'Indicates if Deleted',
-    OPEN_DATE DATE COMMENT 'Open Date of the Account',
-    PRODUCT_ID BIGINT COMMENT 'Product Identifier',
-    SK_ACCOUNT_KEY BIGINT NOT NULL COMMENT 'Surrogate Key for Account',
-    SK_ACCOUNT_STATUS_KEY BIGINT COMMENT 'Surrogate Key for Account Status',
-    SK_ACCOUNT_TYPE_KEY BIGINT COMMENT 'Surrogate Key for Account Type',
-    SK_CUSTOMER_KEY BIGINT COMMENT 'Surrogate Key for Customer',
-    SK_PRODUCT_KEY BIGINT COMMENT 'Surrogate Key for Product',
-    STATUS_ID BIGINT COMMENT 'Status Identifier',
-    UPDATED_BY VARCHAR(64) COMMENT 'Updated By',
-    UPDATE_BATCH_ID BIGINT COMMENT 'Update Batch ID',
-    UPDATE_DATE_TIME TIMESTAMP_NTZ COMMENT 'Last Update Date and Time'
-)
-
-COMMENT = 'Dimension table for accounts in the EDW Mart';
+    ACCOUNT_ID VARCHAR(64), -- Account identifier
+    ACCOUNT_NAME VARCHAR(128), -- Name of the account
+    ACCOUNT_NUMBER VARCHAR(64), -- Numerical identifier for the account
+    ACCOUNT_TYPE_ID BIGINT, -- ID indicating the account type
+    BUSINESS_COLUMN VARCHAR(64), -- Column for business-specific data
+    CLOSE_DATE DATE, -- Account closing date
+    CREATED_BY VARCHAR(64), -- User who created the entry
+    CREATE_BATCH_ID BIGINT, -- Batch ID for create operation
+    CREATE_DATE_TIME TIMESTAMP_NTZ, -- Timestamp of creation
+    CURRENCY_CODE VARCHAR(64), -- Currency identifier
+    CURRENT_FLAG CHAR(1), -- Flag indicating whether the record is current
+    CUSTOMER_ID BIGINT, -- Customer associated with the account
+    DATA_SOURCE VARCHAR(64), -- Source of the data
+    EFFECTIVE_FROM TIMESTAMP_NTZ NOT NULL, -- Start of record validity
+    EFFECTIVE_TO TIMESTAMP_NTZ, -- End of record validity
+    IS_DELETED CHAR(1), -- Flag indicating deletion status
+    OPEN_DATE DATE, -- Account opening date
+    PRODUCT_ID BIGINT, -- Product identifier associated with the account
+    SK_ACCOUNT_KEY BIGINT NOT NULL, -- Surrogate key for account
+    SK_ACCOUNT_STATUS_KEY BIGINT, -- Surrogate key for account status
+    SK_ACCOUNT_TYPE_KEY BIGINT, -- Surrogate key for account type
+    SK_CUSTOMER_KEY BIGINT, -- Surrogate key for customer
+    SK_PRODUCT_KEY BIGINT, -- Surrogate key for product
+    STATUS_ID BIGINT, -- Status identifier of the account
+    UPDATED_BY VARCHAR(64), -- User who last updated the entry
+    UPDATE_BATCH_ID BIGINT, -- Batch ID for update operation
+    UPDATE_DATE_TIME TIMESTAMP_NTZ -- Timestamp of last update
+);
